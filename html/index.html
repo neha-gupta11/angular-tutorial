@@ -21,6 +21,25 @@ Name:
         <li ng-repeat="item in items">{{item}}</li>
     </ul>
 </div>
+<br/>
+<br/>
+========================================================================================================================
+<div class="div-type" ng-init="employees=[{name:'neha gupta',age:26,location:'Delhi'},
+                                    {name:'Rita',age:25,location:'Mumbai'},
+                                    {name:'Rahul',age:26,location:'Noida'},
+                                    {name:'Raj',age:25,location:'Delhi'}]">
+    <ul>
+        <li ng-repeat="emp in employees | filter:name | orderBy:'age'">
+            {{emp.name}}:
+            <br/>
+            Location:{{emp.location}},
+            <br/>
+            Age:{{emp.age}}
+            <br/>
+        </li>
+    </ul>
+</div>
+
 <script type="text/javascript" src="../js/angular.js"></script>
 </body>
 </html>
