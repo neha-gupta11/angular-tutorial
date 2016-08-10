@@ -3,6 +3,8 @@
 <head lang="en">
     <meta charset="UTF-8">
     <title>Angular js test app start</title>
+    <script type="text/javascript" src="../js/angular.js"></script>
+    <script type="text/javascript" src="../js/app.js"></script>
 </head>
 <body ng-app="">
 <br/>
@@ -25,9 +27,9 @@ Name:
 <br/>
 ========================================================================================================================
 <div class="div-type" ng-init="employees=[{name:'neha gupta',age:26,location:'Delhi'},
-                                    {name:'Rita',age:25,location:'Mumbai'},
-                                    {name:'Rahul',age:26,location:'Noida'},
-                                    {name:'Raj',age:25,location:'Delhi'}]">
+{name:'Rita',age:25,location:'Mumbai'},
+{name:'Rahul',age:26,location:'Noida'},
+{name:'Raj',age:25,location:'Delhi'}]">
     <ul>
         <li ng-repeat="emp in employees | filter:name | orderBy:'age'">
             {{emp.name}}:
@@ -40,6 +42,22 @@ Name:
     </ul>
 </div>
 
-<script type="text/javascript" src="../js/angular.js"></script>
+<br/>
+<br/>
+========================================================================================================================
+<div class="container" data-ng-controller="simpleController">
+    <h4>
+        Adding a simple controller
+    </h4>
+    <ul>
+        <li ng-repeat="cust in customers">
+            {{cust.name}}
+            <br/>
+            Location: {{cust.city}}
+        </li>
+    </ul>
+</div>
+
+
 </body>
 </html>
